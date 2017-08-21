@@ -2,7 +2,7 @@
   "name": "react-training",
   "version": "1.0.0",
   "description": "Repo for files created with react training",
-  "main": "index.js",
+  "main": "bundle.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maryb86/react-training.git"
@@ -24,7 +24,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "dev": "webpack-dev-server"
   },
   "author": "",
   "license": "ISC"
