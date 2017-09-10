@@ -1,31 +1,25 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-var name = "Bill";
-
-var App = React.createClass({
-  getInitialState: function(){
-    return {
-      profiles: [
-          {name: 'David'},
-          {name: 'Sarah'}
-      ]
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            profiles: [
+                {name: "Sue"},
+                {name: "Bill"}
+            ]
+        }
     }
-  },
-  render: function() {
-      return (
-        <section>
-            <section>
-                <h3>Profile 1</h3>
-                <p>Name {this.state.profiles[0].name}</p>
-            </section>
-            <section>
-                <h3>Profile 2</h3>
-                <p>Name {this.state.profiles[1].name}</p>
-            </section>
-        </section>
-      )
-  }
-})
+
+    render() {
+        return (
+            <div>
+                <p>{this.state.profiles[0].name}</p>
+                <p>{this.state.profiles[1].name}</p>
+            </div>
+        )
+    }
+}
 
 ReactDOM.render(<App />, document.getElementById('app'));
