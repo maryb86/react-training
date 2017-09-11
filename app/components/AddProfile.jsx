@@ -53,8 +53,3 @@ export default class AddProfile extends React.Component {
         )
     }
 }
-
-/*
-<p>Add a new profile</p>
-<button onClick={this.props.addUser}>Add</button>
-*/

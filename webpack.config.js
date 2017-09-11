@@ -27,15 +27,15 @@ var config = {
 					presets: ['es2015', 'react']
 				}
 			}
+		],
+		plugins: [
+			new webpack.optimize.UglifyJsPlugin({
+					compress: {
+							warnings: false
+					}
+			})
 		]
-	},
-	plugins: [
-		new webpack.optimize.UglifyJsPlugin({
-				compress: {
-						warnings: false
-				}
-		})
-	]
+	}
 }
 
 module.exports = config;
