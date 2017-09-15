@@ -1,10 +1,14 @@
 import React from 'react'
 
-/*
 export default class Profile extends React.Component {
+    shouldComponentUpdate(nextProps, nextState) {
+        return nextProps.name !== this.props.name
+    }
+
     render() {
-      let hobbies = this.props.hobbies.map(hobby => {
-          return <li>{hobby}</li>
+      console.log('rendered')
+      let hobbies = this.props.hobbies.map((hobby, index) => {
+          return <li key={index}>{hobby}</li>
       })
       return (
         <div>
@@ -17,16 +21,4 @@ export default class Profile extends React.Component {
         </div>
       )
     }
-}*/
-let Profile = props => (
-    <div>
-        <h3>{props.name}</h3>
-        <p>{props.name} is {props.age} and {props.bio}</p>
-        <h4>Hobbies</h4>
-        <ul>
-            {props.hobbies.map((hobby, index) => <li key={index}>Hobby is {hobby}</li>)}
-        </ul>
-    </div>
-)
-
-export default Profile
+}
