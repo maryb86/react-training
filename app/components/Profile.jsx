@@ -24,7 +24,7 @@ let Profile = props => (
         <p>{props.name} is {props.age} and {props.bio}</p>
         <h4>Hobbies</h4>
         <ul>
-            {props.hobbies.map(hobby => <li>{hobby}</li>)}
+            {props.hobbies.map((hobby, index) => <li key={index}>Hobby is {hobby}</li>)}
         </ul>
     </div>
 )

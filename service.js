@@ -11,6 +11,7 @@ app.get('/profiles', function(req, res) {
   res.send(
         [
             {
+                "id": 100,
                 "name": "Sue",
                 "age": "30",
                 "bio": "enjoys swimming and biking",
@@ -20,6 +21,7 @@ app.get('/profiles', function(req, res) {
                 ]
             },
             {
+                "id": 101,
                 "name": "Bill",
                 "age": "40",
                 "bio": "enjoys long walks on the beach",

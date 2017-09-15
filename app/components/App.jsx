@@ -29,11 +29,12 @@ export default class App extends React.Component {
     }
 
     render() {
-        console.log("rendering");
-        let profiles = this.state.profiles.map(profile => {
+        let profiles = this.state.profiles.map((profile, index) => {
+        console.log(`profile id: ${profile.id}`);
             return (
-              <div>
+              <div key={index}>
                   <Profile
+                    key = {profile.id}
                     name = {profile.name}
                     age = {profile.age}
                     bio = {profile.bio}
